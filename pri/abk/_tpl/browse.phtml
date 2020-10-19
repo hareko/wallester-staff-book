@@ -1,0 +1,54 @@
+<?php
+/*
+ * browse template
+ *
+ * @package Application
+ * @author Vallo Reima
+ * @copyright (C)2013
+ */
+
+/**
+ * form table body rows
+ * @param array fld -- field names
+ * @return string rows html
+ */
+function Head($fld) {
+  $row = ['id' => '0'];
+  foreach ($fld as $f) {
+    $row[$f] = ¤::_('txt.fld')[$f];
+  }
+  $htm = '<tr id="id0">' . PHP_EOL;
+  $htm .= '<th class="w1">#</th>' . PHP_EOL;
+  $sort = '" title="' . ¤::_('txt.sort') . '" name="';
+  for ($i = 0; $i < count($fld); $i++) {
+    $srt = $sort . $fld[$i] . '"';
+    $s = ($fld[$i] == 'fname' || $fld[$i] == 'lname') ? ('<span>' . ¤::$_->ts['asc'] . '</span>') : '';
+    $htm .= '<th class="w' . ($i + 2) . $srt . '">' . $row[$fld[$i]] . "$s</th>" . PHP_EOL;
+  }
+  $htm .= '</tr>' . PHP_EOL;
+  return $htm;
+}
+?>
+<table class="tabwrap">
+  <tbody>
+    <tr>
+      <td>
+        <table class="tabhead" id="tabhead">
+          <thead>
+            <?= Head($this->fld); ?>
+          </thead>
+        </table>  
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div>    
+          <table class="tabbody">
+            <tbody id="tabbody">
+            </tbody>
+          </table>
+        </div>
+      </td>
+    </tr>	
+  </tbody>
+</table>

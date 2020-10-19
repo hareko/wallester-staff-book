@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+aBook configuration
+@package     Application 
+@author      Vallo Reima
+@copyright   (C)2013
+-->
+<cfg>
+  <!-- Owner properties -->
+  <owr>
+    <name>wBook</name>
+    <copr>vregistry.com</copr>
+    <year>2020</year>
+    <auth>Vallo Reima</auth>
+    <mail>vallo(ätt)vregistry(dot)com</mail>
+  </owr>
+  <!-- Default settings -->
+  <set>
+  </set>
+  <!-- Database settings -->
+  <db>
+    <srv>pgsql</srv>
+    <hst>localhost</hst>
+    <prt></prt>
+    <nme>wbook</nme>
+    <pfx>vallom5_</pfx>
+    <usr>root</usr>
+    <pwd>A3ie4i27</pwd>
+  </db>
+  <!-- Modules -->
+  <mod>
+    <shl>shell</shl>
+    <edt>abook</edt>
+    <brw>browse</brw>
+    <end>finish</end>
+  </mod>
+  <!-- Development settings -->
+  <dev>
+    <dbg>1</dbg>
+    <url>http://arc.vregistry.com/wlt/</url>
+  </dev>
+</cfg>

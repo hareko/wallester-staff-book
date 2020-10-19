@@ -1,0 +1,7 @@
+
+19.10.2020/07:39:11 /home/vallom5/public_html/arc.vregistry.com/wlt/pri/sys/_lib/Base.php 1089
+[0] 'SELECT ALL * FROM INFORMATION_SCHEMA.Columns WHERE TABLE_NAME=?'
+[1] array (
+  0 => 'contacts',
+)
+

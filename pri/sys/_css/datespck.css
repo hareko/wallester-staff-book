@@ -1,0 +1,105 @@
+/*
+ * calendar/datespan/datepick styles
+ *
+ * @package     Application
+ * @author      Vallo Reima
+ * @copyright   (C)2012
+*/
+.calendar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.calendar li {
+  margin-right: 1em;
+  display: inline;
+  float: left;
+  padding-bottom: 1em;
+}
+.calendar table {
+  font-size: 1.0em;
+}
+.calendar th {
+  background-color: silver;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-right: 0.3em;
+}
+.calendar thead tr {
+  text-align: right;
+}
+.calendar tfoot {
+  text-align: center;
+}
+.calendar td {
+  text-align: right;
+}
+.calendar div {
+  display: none;
+}
+.calendar .weekno {
+  text-align: left;
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+.dayF {
+  background-color: #dddddd;
+}
+.dayB {
+  background-color: #cccccc;
+}
+.timB {
+  background-color: #dddddd;
+}
+.dayF:hover, .dayB:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.dayT {
+  background-color: #dddddd;
+}
+.dayS {
+  text-decoration: underline;;
+}
+.dayP:hover, .dayT:hover {
+  text-decoration: underline;
+  cursor: default;
+}
+.datepick {
+  position: fixed;
+  z-index: 999;
+  display: none;
+  font-size: 0.9em;
+}
+.datepick button {
+  padding: 0;
+  font-size: 0.8em;
+}
+.datepick select {
+  font-size: 0.9em;
+}
+.button-cmd {
+  font-size: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+.change {
+  font-size:0.9em;
+  border-collapse:collapse;
+  margin: auto;
+  color: black;
+  background-color: #eeeeee;
+  border: 1px solid silver;
+}
+.change td {
+  border: 0;
+  padding: 0.3em;
+  vertical-align: top;
+}
+.change td input{
+  margin-right: 8px;
+}
+.change td img {
+ width: 22px; 
+}

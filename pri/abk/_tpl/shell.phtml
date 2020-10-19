@@ -1,0 +1,64 @@
+<?php
+/*
+ * layout template
+ *
+ * @package     Application
+ * @author      Vallo Reima
+ * @copyright   (C)2013
+ */
+$cmd = ¤::_('txt.cmd');
+echo ¤::HtmlDoc();
+?>
+<html <?= ¤::HtmlHtml(); ?>>
+  <head>
+    <?= ¤::HtmlHead([$base]); ?>
+    <style type="text/css">
+<?php
+$nme = basename(__FILE__, TPL); /* example's filename */
+include(CSSD . $nme . '.css');
+include(CSSD . 'datespck.css');
+?>
+    </style>
+    <?= ¤::HtmlScript([$base, 'common']); ?>
+    <script>
+<?php
+include(JSD . 'datepick.js');
+include(JSD . $abk . '.js');
+?>
+
+      window.onload = function () {
+        ts = new Transit(); /* activate commons */
+        ts.abk = new <?= ¤::$_->cln; ?>('<?= ¤::$_->fid; ?>');
+      };
+
+    </script>
+  </head>
+  <body>
+    <div class="shell">
+      <div id="head" class="head">
+        <span><?= ¤::_('head'); ?></span>
+      </div>
+      <div class="contents">
+        <div class="info">
+          <div class="section" id="section"></div>
+          <div id="pagin" class="pagin hide">
+            <button type="button" name="TP" title="<?= $cmd['tp']; ?>">&lt;&lt;</button>
+            <button type="button" name="BW" title="<?= $cmd['bw']; ?>">&lt;</button>
+            <button type="button" name="FW" title="<?= $cmd['fw']; ?>">&gt;</button>
+            <button type="button" name="BT" title="<?= $cmd['bt']; ?>">&gt;&gt;</button>
+          </div>
+          <div class="msgraw" id="msgraw">
+            <noscript><?= ¤::_('txt.jsd'); ?></noscript>
+          </div>
+          <div class="endFloat"></div>
+        </div>
+        <div id="content" class="content">
+          <?php include($mod); ?>
+        </div>
+      </div>
+      <div id="foot" class="foot">
+        <?= ¤::_('foot'); ?>
+      </div>
+    </div>
+  </body>
+</html>

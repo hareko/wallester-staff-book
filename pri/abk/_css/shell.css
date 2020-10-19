@@ -1,0 +1,160 @@
+/*
+ * layout style
+ *
+ * @package     Application
+ * @author      Vallo Reima
+ * @copyright   (C)2013
+*/
+html {
+  font-size: 100%;
+}
+body {
+  border: 0 none;
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 1em;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+.shell {
+  width: 950px;
+  border: medium solid silver;
+  position:relative;
+  margin: 1em auto;
+  text-align: center;
+}
+.head {
+  background-color: #C0C0C0;
+  text-align: center;
+  height: 1.4em;
+  font-size: 1.4em;
+}
+.foot {
+  background-color:silver;
+  height: 1.5em;
+  line-height: 1.5em;
+  font-size: 0.9em;
+  text-align: center;
+  clear:both;
+}
+.foot a {
+  color: black;
+  text-decoration: none;
+}
+.foot a:hover {
+  text-decoration: underline;
+}
+.contents {
+  background: none repeat scroll 0 0 #eeeeee;
+  padding: 0.5em;
+}
+.info{
+  font-style: italic;
+  font-family: monospace;
+  font-weight: bold;
+  height: 1.2em;
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+}
+.section {
+  float: left;
+}
+.info .msgraw {
+  text-align: center;
+}
+.content  {
+  clear: both;
+  overflow:auto;
+}
+table {
+  font-size:0.9em;
+  border: 0;
+  border-collapse:collapse;
+  color: black;
+}
+td {
+  vertical-align: top;
+}
+.modify {
+  background-color: #dddddd;
+  border: 1px solid silver;
+  margin: auto;
+}
+.modify td {
+  border: 0;
+  padding: 0.3em;
+  text-align: left;
+}
+.modify input{
+  width: 300px;
+}
+.modify select{
+  width: 100%;
+}
+/*.modify tr td:first-child {
+    width: 25%;
+}
+.modify tr td:nth-last-child {
+    width: 75%;
+}*/
+.command {
+  margin: 0.5em;
+}
+.command button {
+  font-size: 0.75em;
+}
+.pagin{
+  float: right;
+  margin-top: 0.1em;
+  font-size: 1em;
+}
+.browse {
+  width: 925px; 
+  margin: auto;
+  padding: 0;
+}
+.browse .tabwrap { 
+  width: 925px;
+  margin: auto;
+  border: 1px solid silver;
+}
+.browse div { 
+  width: 925px; 
+  overflow:auto;
+}
+.browse .tabhead, .tabbody { 
+  width: 900px; 
+  font-size: 0.85em;
+  text-align: left;
+}
+.browse .tabhead th:hover{ 
+  cursor: pointer;
+}
+.browse .tabhead span { 
+  color: red;
+}
+.browse .tabbody tr:hover{ 
+  background-color: silver;
+  cursor: default;
+}
+.w1{
+  width: 3%;
+}
+.w2{
+  width: 10%;
+}
+.w3{
+  width: 10%;
+}
+.w4{
+  width: 10%;
+}
+.w5{
+  width: 8%;
+}
+.w6{
+  width: 25%;
+}
+.w7{
+  width: 34%;
+}

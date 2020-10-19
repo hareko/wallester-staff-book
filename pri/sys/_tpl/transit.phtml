@@ -1,0 +1,19 @@
+<?php
+/**
+ * Transit data holder
+ *
+ * @package     System
+ * @author      Vallo Reima
+ * @copyright   (C)2013
+ */
+$fnm = ¤::Config('db/nme') . CFG;
+$transit = ¤::Enc(¤::$_->ts, true);
+?>
+<form class="hide" id="transit" target="download" enctype="application/x-www-form-urlencoded" 
+      method="post" action="<?= ¤::_('url'); ?>">
+  <div><?= $transit; ?></div>
+  <input type="hidden" name="srv" value="brw">
+  <input type="hidden" name="fnm" value="<?= $fnm; ?>">
+  <input type="hidden" name="wkf" id="filename">
+</form>
+<iframe class="hide" name="download"></iframe>

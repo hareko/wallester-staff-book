@@ -1,0 +1,14 @@
+UPDATE `contacts` a, towns b SET a.`address`= CONCAT_WS(", ", A.street, CONCAT(a.zip," ",b.name)) WHERE a.town_id = b.id
+UPDATE `contacts` SET email= CONCAT(CONCAT_WS(".", fname, lname),"@mails.com")
+UPDATE `contacts` SET birth="1960-07-27";
+UPDATE `contacts` SET birth=DATE_ADD(birth,interval 1 year);
+
+SELECT ALL a.id,a.fname,a.lname,a.birth,a.gender,a.email,a.address FROM contacts a ORDER BY fname ASC,lname ASC LIMIT 0,10 LOCK IN SHARE MODE
+SELECT ALL * FROM contacts WHERE id=13 FOR UPDATE
+
+1) mysql OFFSET needs v.8
+2) pgsql ' LOCK IN SHARE MODE' -> ' FOR SHARE'
+
+Git/hub
+-------
+cd C:\Users\Laptop\Documents\NetBeansProjects\wlt
